@@ -1,0 +1,78 @@
+\documentclass{article}
+
+\usepackage{tikz}
+\usetikzlibrary{mindmap,trees}
+\usepackage{verbatim}
+\usepackage{geometry}
+ \geometry{
+ a2paper,
+ total={250mm,250mm},
+ left=10mm,
+ top=10mm,
+ }
+
+\begin{document}
+\pagestyle{empty}
+
+\begin{tikzpicture}[mindmap, grow cyclic, every node/.style=concept, concept color=orange!40, level 1 concept/.append style={level distance=7cm}]
+  \path[mindmap,concept color=black,text=white]
+    node[concept] {Wallet Protocols}
+    [clockwise from=0]
+    child[concept color=green!50!black] {
+      node[concept] {Chat}
+      [clockwise from=90]
+      child { node[concept] {Discussion} }
+      child { node[concept] {Debate} }
+      child { node[concept] {Connection} }
+      child { node[concept] {DMs $\alpha$MTP.org} }
+    }  
+    child[concept color=blue] {
+      node[concept] {Access}
+      [clockwise from=65]
+      child { node[concept] {Invites GUILD.XYZ} }
+      child { node[concept] {Tickets} }
+      child { node[concept] {IO???S} }
+      child { node[concept] {Events} }
+      child { node[concept] {Streams} }
+    }
+    child[concept color=red] {
+      node[concept] {Culture}
+      [clockwise from=-30]
+      child { node[concept] {Champion} }
+      child { node[concept] {Discover} }
+      child { node[concept] {Create} }
+      child { node[concept] {Curate} }
+      child { node[concept] {Earn} }
+      child { node[concept] {Mentor} }
+      child { node[concept] {Support} }
+      child { node[concept] {Contribute} }
+    }
+    child[concept color=orange] {
+      node[concept] {Social}
+      [clockwise from=-120]
+      child { node[concept] {Control???} }
+      child { node[concept] {Ideas} }
+      child { node[concept] {Algorithm Marketplace} }
+    }
+    child[concept color=purple] {
+      node[concept] {Money}
+      [clockwise from=-30]
+      child { node[concept] {Borrow} }
+      child { node[concept] {SRENM???} }
+      child { node[concept] {Save} }
+      child { node[concept] {Lend} }
+      child { node[concept] {Pay} }
+      child { node[concept] {Own} }
+    }
+    child[concept color=brown] {
+      node[concept] {Agreements}
+      [clockwise from=-30]
+      child { node[concept] {Coordination} }
+      child { node[concept] {Groups \$SAFE} }
+      child { node[concept] {Votes TREY.XYZ} }
+      child { node[concept] {Proposals} }
+      child { node[concept] {Delegation} }
+      child { node[concept] {Politics} }
+    };
+\end{tikzpicture}
+\end{document}
